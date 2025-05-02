@@ -11,12 +11,15 @@ export default defineConfig({
     include: ['react-hot-toast']
   },
   resolve: {
-    dedupe: ['react', 'react-dom']
+    dedupe: ['react', 'react-dom'],
+    alias: {
+      '@login': resolve(__dirname, 'Login page')
+    }
   },
   build: {
     outDir: 'dist'
   },
-  publicDir: 'Login page',
+  publicDir: 'public',
   server: {
     fs: {
       allow: ['.']
